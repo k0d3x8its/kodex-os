@@ -250,7 +250,7 @@ kodex-os/
 
 ## Philosophy
 
-> *Capture freely. Organize intentionally. Store redundantly.*
+> *Capture freely. Organize strategically. Store redundantly.*
 
 Kodex OS does not prescribe what you write or think. It only asks that you write it down, decide what matters, and keep what's worth keeping.
 
