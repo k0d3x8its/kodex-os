@@ -6,7 +6,7 @@
 
 ## What is Kodex OS?
 
-Kodex OS is a modular personal knowledge system built around the belief that the best thinking happens on paper, but the best *organization* happens digitally. It bridges a physical capture practice with digital tools — without requiring any single tool to make the whole system work.
+Kodex OS is a modular personal knowledge system built around the belief that the best thinking happens on paper, but the best *organization* happens digitally. It bridges a physical capture practice with digital tools without requiring any single tool to make the whole system work.
 
 The system is designed to be **taken apart and reassembled**. If you don't use Obsidian, remove it. If you don't use Notion, remove it. The core of Kodex OS — Field Notes and a physical archive — stands on its own.
 
@@ -24,23 +24,29 @@ Layer 0: Field Notes  →  Layer 1: LLM Wiki  →  Layer 2: Notion
 
 | Layer | Name | Layer Type |
 |---|---|---|
-| 0 | Field Notes | Intake Layer |
-| 1 | LLM Wiki | Bridge Layer |
-| 2 | Notion | Operations Layer |
+| 0 | Raw Capture | Intake Layer |
+| 1 | Knowledge Base | Bridge Layer |
+| 2 | Project Itelligence | Operations Layer |
 | 3 | The Archive | Storage Layer |
-| 4 | Trello | Execution Layer |
+| 4 | Project Management | Execution Layer |
 
 ---
 
-### Layer 0 — Field Notes *(Intake Layer)*
-The intake layer of the entire system. This is where everything begins — observations, ideas, sketches, questions, half-formed thoughts, lists, anything. There is no filter here. This layer is intentionally unstructured. Its job is not to organize — it is to capture.
+### Layer 0 — Raw Capture
 
-**Tools:** [Field Notes memo books](https://fieldnotesbrand.com), pen, archival ink (optional)
+#### Field Notes - *Intake Layer*
+
+The intake layer of the entire system. This is where everything begins — observations, ideas, sketches, questions, half-formed thoughts, lists, anything. There is no filter here. This layer is intentionally unstructured. Its job is not to organize but to capture.
+
+**Tools:** [Field Notes memo books](https://fieldnotesbrand.com), pen, archival ink (optional)\
 **Modular:** This is the only non-optional layer. Everything else depends on it.
 
 ---
 
-### Layer 1 — LLM Wiki / Obsidian *(Bridge Layer)*
+### Layer 1 — Knowledge Base
+
+#### LLM Wiki - *Bridge Layer*
+
 The bridge between physical and digital. This layer has two halves: an immutable **raw capture** half where scanned and transcribed Field Notes pages live, and an LLM-generated **wiki** half that organizes and interlinks that raw content. The LLM reads from `raw/`, writes to `wiki/`, and never modifies raw.
 
 **Vault structure:**
@@ -54,50 +60,61 @@ Kodex Wiki/
 ```
 
 **Characteristics:**
-- `raw/` is the immutable input layer — scanned and transcribed Field Notes pages, never modified by the LLM
-- `wiki/` is the LLM-generated output layer — fully owned and maintained by the LLM
-- Each Field Notes memo book maps 1:1 to a folder under `raw/` (e.g. `field-notes-vol-001/`)
+- `raw/` is the immutable input sub-layer — scanned and transcribed Field Notes pages, never modified by the LLM
+- `wiki/` is the LLM-generated output sub-layer — fully owned and maintained by the LLM
+- Each Field Notes memo book maps 1:1 to a folder under `raw/` (e.g. `FN-vol-001/` or `R-vol-001/`)
 - `index.md` and `log.md` provide navigation and chronology — the LLM updates them on every ingest
 - `SCHEMA.md` defines the rules the LLM follows when maintaining the wiki
 - Notes are interlinked using Obsidian's graph and backlink features
 - Serves as the digital twin of the physical archive (Layer 3)
 
-**Tools:** [Obsidian](https://obsidian.md), LLM (e.g. Claude)
+**Tools:** [Obsidian](https://obsidian.md), LLM (e.g. Claude)\
 **Optional:** If removed, the system operates in the physical layer only. Phases still function — the LLM Wiki steps are simply skipped.
 
 ---
 
-### Layer 2 — Notion *(Operations Layer)*
+### Layer 2 — Project Intelligence
+
+#### Notion - *Operations Layer*
+
 The operational layer. When knowledge from the LLM Wiki matures into a project or initiative worth developing, it moves into Notion for organization, planning, and iteration. Notion is not a storage system — it is a thinking and planning environment that pulls from the LLM Wiki as its knowledge base. This could also be another Obsidian vault or any note-taking application of your choice.
 
-**Tools:** [Notion](https://notion.so) (or equivalent)
+**Tools:** [Notion](https://notion.so) (or equivalent)\
 **Optional:** Can be replaced with any project management or note-taking tool, or removed entirely.
 
 ---
 
-### Layer 3 — The Archive *(Storage Layer)*
-When a Field Notes memo book is filled, it enters the Archive. Each book is placed in a labeled envelope with metadata documented on the cover — dates, topics, volume number, and any other pertinent identifiers. By the time a book reaches the Archive, its LLM Wiki entry (if used) should already be complete. The physical book and digital record together form the permanent record.
+### Layer 3 — The Archive
 
-**Materials:** Envelopes, archival pen for labeling
-**Optional:** The Archive is the natural conclusion of a filled memo book. It can be as simple as a labeled box.
+#### Long-Term Memory - *Storage Layer*
+
+When a Field Notes memo book is filled, it enters the Archive. Each book is placed in a labeled envelope with metadata documented on the cover (dates, topics, and any other pertinent identifiers) and volume number on the back. By the time a book reaches the Archive, its LLM Wiki entry (if used) should already be complete. The physical book and digital record together form the permanent record.
+
+**Materials:** Envelopes, archival ink for labeling\
+**Optional:** The Archive is the natural conclusion of a filled memo book that is no longer needed. I use [Field Notes Archival Wooden Box](https://fieldnotesbrand.com/products/archival-wooden-box) to organize my archives.
 
 ---
 
-### Layer 4 — Trello *(Execution Layer)*
-The execution layer. While Notion handles project intelligence — the thinking, planning, and structuring of ideas — Trello is where those projects become action. The timeline lives in Notion; Trello manages execution.
+### Layer 4 — Project Management
+
+#### Trello - *Execution Layer*
+
+The execution layer. While Notion handles project intelligence (the thinking, planning, and structuring of ideas) Trello is where those projects become action. The timeline, or roadmap, lives in Notion; Trello manages execution.
+
+I break my timeline, for projects, down into Phases, Epochs, Goals, Micro-Goals, and Tasks. I normally have four phases, and however many of the rest are necessary for each phase, and a pre-phase if necessary.
 
 Each Trello board maps one-to-one with a project. Phases and Epochs are surfaced as card labels, keeping the full hierarchy visible in a single view.
 
 **Board structure:**
 - One board = one project
-- Phases and Epochs are surfaced as card labels — Goal is never a label
+- Phases and Epochs are surfaced as card labels
 - Each card represents one Micro-Goal, titled: `Goal # | M#: Title of Micro-Goal`
 - Checklist items within each card map directly to Tasks (Task I, Task II, etc.)
 
 **Kanban columns (left → right):**
 `Backlog → To Do → Doing → Review → Testing → Done`
 
-**Tools:** [Trello](https://trello.com)
+**Tools:** [Trello](https://trello.com)\
 **Optional:** Can be replaced with any task tracking tool, or removed if Notion handles execution.
 
 ---
@@ -115,22 +132,27 @@ Kodex OS moves through four phases. These are fluid — not every piece of captu
 | IV | Archiving | File completed memo books; close digital records |
 
 ### Prep Phase — Build
+
 Gather your materials and set up your memo books. Assign each book a role (daily log, research, etc.) and configure your tools before you start capturing.
 
 ### Phase I — Observe & Document
+
 The core of the system. Carry your Field Notes memo book and write down what you observe, think, and encounter. No format requirements. This is Layer 0 in practice.
 
 ### Phase II — Data Extraction
-After documenting, review what you've captured. Decide what's worth pursuing further. Transfer relevant content from your general memo book into a dedicated Field Notes notebook for that subject.
 
-> **LLM Wiki (optional):** This is the natural point to open a dedicated Wiki entry for the subject being extracted — running digitally in parallel with the physical notebook. If not using the LLM Wiki, this phase operates entirely in Layer 0 and nothing changes.
+After documenting, review what you've captured. Decide what's worth pursuing further. Transfer relevant content from your general memo book into a dedicated Field Notes notebook for that subject (or just another memo book - your choice).
+
+> **LLM Wiki (optional):** This is the natural point to open a dedicated Wiki entry for the subject being extracted — running digitally in parallel with the physical notebook/memo book. If not using the LLM Wiki, this phase operates entirely in Layer 0 and nothing changes.
 
 ### Phase III — Analysis & Processing
+
 Analyze what you've extracted. Filter for relevance. Decide where it goes — does it stay on your person, get archived, or is it done? The core question: *Am I done? Is it ready to archive?*
 
 > **LLM Wiki (optional):** This phase also includes reviewing and refining the corresponding Wiki entry — confirming notes are accurate, tagged correctly, and cross-linked. The core question is the same regardless of your stack.
 
 ### Phase IV — Archiving
+
 When a memo book is filled, archive it. Fill out the envelope cover with all relevant metadata and file it. If using the LLM Wiki, the digital record should be complete before the physical book is archived.
 
 ---
@@ -138,33 +160,38 @@ When a memo book is filled, archive it. Fill out the envelope cover with all rel
 ## Setup Guide
 
 ### What You Actually Need (Minimum)
-- [ ] Field Notes memo books (at least 2 — one general, one research)
+
+- [ ] Field Notes memo book (at least 1 — general research. I use one for daily logs and one for general research.)
 - [ ] A pen
 - [ ] Envelopes for archiving
 - [ ] Archival ink (optional but recommended for longevity)
 
 ### Adding the LLM Wiki — Layer 1 (Optional)
+
 1. Install [Obsidian](https://obsidian.md) and create a new vault called `Kodex Wiki`
 2. Create the two top-level directories: `raw/` and `wiki/`
-3. Inside `raw/`, create a folder for your active memo book (e.g. `field-notes-vol-001/`)
+3. Inside `raw/`, create a folder for your active memo book (e.g. `FN-vol-001/` or `R-vol-001`)
 4. Inside `wiki/`, create empty `index.md` and `log.md` files — the LLM will populate them
 5. Create a `SCHEMA.md` at the vault root that defines how the LLM should maintain the wiki *(see `/templates/schema.md`)*
-6. At the end of each day you've written something, scan the relevant pages of your active memo book and drop them into the appropriate `raw/` subfolder
+6. At the end of each day you've written something, scan the relevant page(s) of your active memo book and drop them into the appropriate `raw/` subfolder
 7. Pass the scans to an LLM (e.g. Claude) — it transcribes into `raw/`, then writes structured pages into `wiki/` and updates `index.md` and `log.md`
 8. Review the wiki entries; the LLM owns the wiki, you own the review
 
 ### Adding Notion — Layer 2 (Optional)
+
 1. Create a Notion account at [notion.so](https://notion.so)
 2. Use the Kodex OS workspace as your command center
 3. Develop ideas and knowledge from the LLM Wiki into projects and active initiatives here
 
 ### Adding the Physical Archive — Layer 3
+
 1. When a memo book is full, gather an envelope
-2. On the cover, document: dates covered, volume number, primary topics, any relevant identifiers
+2. On the cover, document: dates covered, primary topics, any relevant identifiers. On the back the volume number is listed.
 3. File chronologically or by subject
 4. If using the LLM Wiki, confirm the digital record is complete before sealing
 
 ### Adding Trello — Layer 4 (Optional)
+
 1. Create a [Trello](https://trello.com) account
 2. Create one board per project
 3. Set up card labels for Phases and Epochs
