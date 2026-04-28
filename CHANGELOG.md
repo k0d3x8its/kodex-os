@@ -3,10 +3,12 @@
 ## v1.1.0b (2026-04-26)
 
 - **➕:** Trello support for goal tracking
+- **➕:** README.md
 
 ## v1.0.0b (2026-04-20)
 
 - **➕:** LLM Wiki support for knowledge base development
+- **➕:** A 5 Layer modular foundation called The Kodex Stack
 
 ## v0.9.0a (2024)
 
