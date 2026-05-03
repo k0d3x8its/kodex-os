@@ -175,11 +175,11 @@ Gather your materials and set up your memo books. Assign each book a role (daily
 
 The core of the system. Carry your Field Notes memo book and write down what you observe, think, and encounter. No format requirements. This is Layer 0 in practice.
 
-> **LLM Wiki (optional):** At the end of any day you've written something worth keeping, scan or photograph the relevant pages and drop them into the appropriate `raw/` subfolder. Then run `/kos-ingest` — the LLM transcribes the pages and builds or updates the corresponding wiki entry. If nothing was documented that day, nothing needs to run.
-
 ### Phase II — Data Extraction
 
 After documenting, review what you've captured. Decide what's worth pursuing further. Transfer relevant content from your general memo book into a dedicated Field Notes notebook for that subject (or just another memo book — your choice).
+
+> **LLM Wiki (optional):** At the end of any day you've written something worth keeping, scan or photograph the relevant pages and drop them into the appropriate `raw/` subfolder. Then run `/kos-ingest` — the LLM transcribes the pages and builds or updates the corresponding wiki entry. If nothing was documented that day, nothing needs to run.
 
 > **LLM Wiki (optional):** This is the natural point to open a dedicated Wiki entry for the subject being extracted — running digitally in parallel with the physical notebook/memo book. Run `/kos-ingest` to process your scans and build the entry. If not using the LLM Wiki, this phase operates entirely in Layer 0 and nothing changes.
 
