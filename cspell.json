@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Kodex",
+    "kodex",
+    "K0d3x",
+    "k0d3x8its",
+    "Obsidian",
+    "Trello",
+    "kanban",
+    "backlog",
+    "interlinked",
+    "sublayer",
+    "CHANGELOG",
+    "SCHEMA",
+    "ingest",
+    "ingests"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".git",
+    "LICENSE"
+  ]
+}
