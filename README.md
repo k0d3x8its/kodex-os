@@ -284,17 +284,17 @@ This system evolves. See `CHANGELOG.md` for a full history of updates to Kodex O
 kodex-os/
 │
 ├── README.md                        ← You are here
-├── CHANGELOG.md                     ← Version history
-├── LICENSE
-├── the-kodex-stack.md
-├── list-of-materials.md
+├── [CHANGELOG.md](CHANGELOG.md)                     ← Version history
+├── [LICENSE](LICENSE)
+├── [the-kodex-stack.md](the-kodex-stack.md)
+├── [list-of-materials.md](list-of-materials.md)
 │
 └── phases/
-    ├── prep-phase-build.md
-    ├── phase-1-observe-document.md
-    ├── phase-2-data-extraction.md
-    ├── phase-3-analysis-processing.md
-    └── phase-4-archiving.md
+    ├── [prep-phase-build.md](phases/prep-phase-build.md)
+    ├── [phase-1-observe-document.md](phases/phase-1-observe-document.md)
+    ├── [phase-2-data-extraction.md](phases/phase-2-data-extraction.md)
+    ├── [phase-3-analysis-processing.md](phases/phase-3-analysis-processing.md)
+    └── [phase-4-archiving.md](phases/phase-4-archiving.md)
 ```
 
 ---
