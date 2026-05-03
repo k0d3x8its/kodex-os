@@ -32,6 +32,7 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v19
         with:
           globs: "**/*.md"
+          config: ".markdownlint.jsonc"   # explicitly point to the config file
 
   # ---------------------------------------------------------------------------
   # Job 2: Broken Link Check
