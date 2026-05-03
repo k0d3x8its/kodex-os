@@ -1,0 +1,74 @@
+# =============================================================================
+# Kodex OS — Documentation CI Pipeline
+# =============================================================================
+# Runs on every push and PR to main. Checks three things:
+#   1. Markdown lint   — consistent formatting across all .md files
+#   2. Link check      — catches broken internal/external links
+#   3. Spell check     — catches typos in prose
+# =============================================================================
+
+name: Docs CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1: Markdown Linting
+  # Uses markdownlint-cli2 to enforce consistent Markdown style.
+  # Rules are configured in .markdownlint.jsonc (create one in repo root).
+  # ---------------------------------------------------------------------------
+  markdown-lint:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"
+
+  # ---------------------------------------------------------------------------
+  # Job 2: Broken Link Check
+  # Scans all .md files for internal and external links, reports any that 404.
+  # ---------------------------------------------------------------------------
+  link-check:
+    name: Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          # Check all Markdown files in the repo
+          folder-path: "."
+          use-quiet-mode: "yes"
+          # Optional: create a .markdown-link-check.json config in repo root
+          # to ignore specific URLs or set timeout values
+          config-file: ".markdown-link-check.json"
+
+  # ---------------------------------------------------------------------------
+  # Job 3: Spell Check
+  # Uses cspell to catch typos. Custom words (like "Kodex", "Obsidian", etc.)
+  # go in a cspell.json config file in the repo root.
+  # ---------------------------------------------------------------------------
+  spell-check:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run cspell
+        uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: "**/*.md"
+          # Set to true if you want the workflow to fail on typos
+          strict: false
