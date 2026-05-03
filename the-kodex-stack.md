@@ -39,11 +39,23 @@ The LLM reads from raw, writes to the wiki, and never modifies raw. The wiki doe
 **Vault structure:**
 ```
 Kodex Wiki/
-├── raw/         ← Scanned & transcribed Field Notes pages (immutable)
-├── wiki/        ← LLM-generated, LLM-maintained
-│   ├── index.md   (catalog of all wiki pages)
-│   └── log.md     (chronological record of ingests, queries, lints)
-└── SCHEMA.md    ← Rules the LLM follows when maintaining the wiki
+├── raw/                    ← Your inbox — drop sources here (immutable)
+│   ├── FL-vol-XXX/         ← Field Log: daily log memo books
+│   ├── FR-vol-XXX/         ← Field Research: catchall research memo books
+│   └── FS-vol-XXX/         ← Field Study: dedicated subject memo books
+├── wiki/                   ← LLM-maintained (do not edit by hand)
+│   ├── sources/            ← One summary per ingested source
+│   ├── books/              ← One page per Field Notes memo book
+│   │   └── _archived/      ← Sealed entries for archived memo books
+│   ├── entities/           ← People, orgs, products, tools
+│   ├── concepts/           ← Ideas, frameworks, theories
+│   ├── synthesis/          ← Comparisons, analyses, themes
+│   ├── questions/          ← Open questions extracted from raw/
+│   ├── index.md            ← Master catalog of all pages
+│   └── log.md              ← Chronological operation record
+├── output/                 ← Reports and generated artifacts
+├── SCHEMA.md               ← Rules the LLM follows
+└── CLAUDE.md               ← Agent config (filename varies by agent)
 ```
 
 **Characteristics:**
