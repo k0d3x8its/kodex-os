@@ -298,5 +298,11 @@ kodex-os/
 Kodex OS does not prescribe what you write or think. It only asks that you write it down, decide what matters, and keep what's worth keeping.
 
 ---
+## License
+
+Copyright 2026 K0d3x
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full text.
+---
 
 *Kodex OS is a living document. It changes as the system changes.*
