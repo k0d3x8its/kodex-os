@@ -1,6 +1,6 @@
 # 🗂️ Phase II — Data Extraction
 
-The data extraction phase happens after things have been documented. Once documented, extraction is needed to begin further research. One example would be finding something interesting and conduct extensive research on that subject. This requires transferring all data/information from your Field Research memo book into a [Field Study](https://fieldnotesbrand.com/products/pitch-black-notebook) (This can be a Field Notes Notebook or a Field Notes memo book) dedicated to that subject alone. This saves space in your day-to-day memo book.
+The data extraction phase happens after things have been documented. Once documented, extraction is needed to begin further research. One example would be finding something interesting and conduct extensive research on that subject. This requires transferring all data/information from your Field Research memo book into a [Field Study](https://fieldnotesbrand.com/products/pitch-black-notebook) (This can be a Field Notes notebook or a Field Notes memo book) dedicated to that subject alone. This saves space in your day-to-day memo book.
 
 > 💡 If you are using the **LLM Wiki** as part of your stack, this phase is also the natural point to open a Field Study for the subject being extracted — running digitally in parallel with the physical notebook/memo book. If you are not using the LLM Wiki, this phase operates entirely in the physical layer, Layer 0 of the Kodex Stack, and nothing changes.
 
