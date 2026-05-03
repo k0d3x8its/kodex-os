@@ -15,9 +15,10 @@ The Field Notes memo books are the core of this system. They are used for everyt
 #### Memo Books
 
 These are used for documenting:
-- Daily logs
-- Work hours
-- Conducting research
+- Field logs
+- Field Research
+- Field Study
+- Work Hours
 
 > [Field Notes Memo Books](https://fieldnotesbrand.com)
 
@@ -28,9 +29,10 @@ These are used to merely extend research that starts within a memo book.
 > [Field Notes Pitch Black Notebook](https://fieldnotesbrand.com/products/pitch-black-notebook)
 
 **Sub-pages:**
-- **Daily Logs** — For logging daily entries
+- **Field Logs** — For logging daily entries
+- **Field Research** — For conducting research
+- **Field Study** — For deeper research worth preserving
 - **Work Hours** — For tracking work hours
-- **Research** — For conducting research
 
 ### Moleskine
 
@@ -97,12 +99,6 @@ I use this for adding images to my research or my daily logs. Originally I would
 ## 📱 Scannable App *(Optional)*
 
 This is an Evernote app that scans documents automatically. I'm sure a better one exists but I have been using this since Evernote released it.
-
----
-
-## 🐘 Evernote *(Optional)*
-
-Evernote, in combination with the Scannable app, is used to develop digital archives of what has been documented in memo books and notebooks. This app will be used during the archiving phase.
 
 ---
 
