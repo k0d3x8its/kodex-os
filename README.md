@@ -26,7 +26,7 @@ Layer 0: Field Notes  →  Layer 1: LLM Wiki  →  Layer 2: Notion
 |---|---|---|
 | 0 | Raw Capture | Intake Layer |
 | 1 | Knowledge Base | Bridge Layer |
-| 2 | Project Itelligence | Operations Layer |
+| 2 | Project Intelligence | Operations Layer |
 | 3 | The Archive | Storage Layer |
 | 4 | Project Management | Execution Layer |
 
@@ -49,26 +49,54 @@ The intake layer of the entire system. This is where everything begins — obser
 
 The bridge between physical and digital. This layer has two halves: an immutable **raw capture** half where scanned and transcribed Field Notes pages live, and an LLM-generated **wiki** half that organizes and interlinks that raw content. The LLM reads from `raw/`, writes to `wiki/`, and never modifies raw.
 
+**[KOS](https://github.com/k0d3x8its/kos) is the reference implementation of this layer** — a set of Agent Skills that install into your AI coding agent and handle vault setup, ingest, querying, and integrity checks. Install it with:
+
+```bash
+npx skills add k0d3x8its/kos
+```
+
+This gives you five skills:
+
+| Skill | What it does |
+|---|---|
+| `/kos` | Set up a new Layer 1 vault (guided wizard) |
+| `/kos-ingest` | Process raw sources into wiki pages |
+| `/kos-query` | Ask questions against your wiki |
+| `/kos-lint` | Health-check the wiki |
+| `/kos-archive` | Close out a completed memo book — seals the `books/` entry, moves it to `books/_archived/`, and logs the event |
+
 **Vault structure:**
 ```
 Kodex Wiki/
-├── raw/         ← Scanned & transcribed Field Notes pages (immutable)
-├── wiki/        ← LLM-generated, LLM-maintained
-│   ├── index.md   (catalog of all wiki pages)
-│   └── log.md     (chronological record of ingests, queries, lints)
-└── SCHEMA.md    ← Rules the LLM follows when maintaining the wiki
+├── raw/                    ← Your inbox — drop sources here (immutable)
+│   ├── FL-vol-XXX/         ← Field Log: daily log memo books
+│   ├── FR-vol-XXX/         ← Field Research: catchall research memo books
+│   └── FS-vol-XXX/         ← Field Study: dedicated subject memo books
+├── wiki/                   ← LLM-maintained (do not edit by hand)
+│   ├── sources/            ← One summary per ingested source
+│   ├── books/              ← One page per Field Notes memo book
+│   │   └── _archived/      ← Sealed entries for archived memo books
+│   ├── entities/           ← People, orgs, products, tools
+│   ├── concepts/           ← Ideas, frameworks, theories
+│   ├── synthesis/          ← Comparisons, analyses, themes
+│   ├── questions/          ← Open questions extracted from raw/
+│   ├── index.md            ← Master catalog of all pages
+│   └── log.md              ← Chronological operation record
+├── output/                 ← Reports and generated artifacts
+├── SCHEMA.md               ← Rules the LLM follows
+└── CLAUDE.md               ← Agent config (filename varies by agent)
 ```
 
 **Characteristics:**
 - `raw/` is the immutable input sub-layer — scanned and transcribed Field Notes pages, never modified by the LLM
 - `wiki/` is the LLM-generated output sub-layer — fully owned and maintained by the LLM
-- Each Field Notes memo book maps 1:1 to a folder under `raw/` (e.g. `FN-vol-001/` or `R-vol-001/`)
+- Each Field Notes memo book maps 1:1 to a folder under `raw/`
 - `index.md` and `log.md` provide navigation and chronology — the LLM updates them on every ingest
 - `SCHEMA.md` defines the rules the LLM follows when maintaining the wiki
 - Notes are interlinked using Obsidian's graph and backlink features
 - Serves as the digital twin of the physical archive (Layer 3)
 
-**Tools:** [Obsidian](https://obsidian.md), LLM (e.g. Claude)\
+**Tools:** [Obsidian](https://obsidian.md), LLM (e.g. Claude), [KOS](https://github.com/k0d3x8its/kos)\
 **Optional:** If removed, the system operates in the physical layer only. Phases still function — the LLM Wiki steps are simply skipped.
 
 ---
@@ -139,21 +167,25 @@ Gather your materials and set up your memo books. Assign each book a role (daily
 
 The core of the system. Carry your Field Notes memo book and write down what you observe, think, and encounter. No format requirements. This is Layer 0 in practice.
 
+> **LLM Wiki (optional):** At the end of any day you've written something worth keeping, scan or photograph the relevant pages and drop them into the appropriate `raw/` subfolder. Then run `/kos-ingest` — the LLM transcribes the pages and builds or updates the corresponding wiki entry. If nothing was documented that day, nothing needs to run.
+
 ### Phase II — Data Extraction
 
-After documenting, review what you've captured. Decide what's worth pursuing further. Transfer relevant content from your general memo book into a dedicated Field Notes notebook for that subject (or just another memo book - your choice).
+After documenting, review what you've captured. Decide what's worth pursuing further. Transfer relevant content from your general memo book into a dedicated Field Notes notebook for that subject (or just another memo book — your choice).
 
-> **LLM Wiki (optional):** This is the natural point to open a dedicated Wiki entry for the subject being extracted — running digitally in parallel with the physical notebook/memo book. If not using the LLM Wiki, this phase operates entirely in Layer 0 and nothing changes.
+> **LLM Wiki (optional):** This is the natural point to open a dedicated Wiki entry for the subject being extracted — running digitally in parallel with the physical notebook/memo book. Run `/kos-ingest` to process your scans and build the entry. If not using the LLM Wiki, this phase operates entirely in Layer 0 and nothing changes.
 
 ### Phase III — Analysis & Processing
 
 Analyze what you've extracted. Filter for relevance. Decide where it goes — does it stay on your person, get archived, or is it done? The core question: *Am I done? Is it ready to archive?*
 
-> **LLM Wiki (optional):** This phase also includes reviewing and refining the corresponding Wiki entry — confirming notes are accurate, tagged correctly, and cross-linked. The core question is the same regardless of your stack.
+> **LLM Wiki (optional):** This phase also includes reviewing and refining the corresponding Wiki entry — confirming notes are accurate, tagged correctly, and cross-linked. Run `/kos-lint` to health-check the wiki. The core question is the same regardless of your stack.
 
 ### Phase IV — Archiving
 
 When a memo book is filled, archive it. Fill out the envelope cover with all relevant metadata and file it. If using the LLM Wiki, the digital record should be complete before the physical book is archived.
+
+> **LLM Wiki (optional):** Before sealing the book, run `/kos-archive` against the corresponding `books/` entry. The skill confirms the wiki record is complete, seals the page with a closed status and archival metadata, moves it into `books/_archived/`, and logs the event in `log.md`. The physical book and its sealed digital record then form the permanent, immutable pair.
 
 ---
 
@@ -161,21 +193,32 @@ When a memo book is filled, archive it. Fill out the envelope cover with all rel
 
 ### What You Actually Need (Minimum)
 
-- [ ] Field Notes memo book (at least 1 — general research. I use one for daily logs and one for general research.)
+- [ ] Field Notes memo books (at least 2 — one Field Log for daily entries, one Field Research for catchall research)
 - [ ] A pen
 - [ ] Envelopes for archiving
 - [ ] Archival ink (optional but recommended for longevity)
 
 ### Adding the LLM Wiki — Layer 1 (Optional)
 
+The fastest path is [KOS](https://github.com/k0d3x8its/kos), the Layer 1 toolkit. It handles all of the setup below automatically via the `/kos` wizard.
+
+**Manual setup:**
+
 1. Install [Obsidian](https://obsidian.md) and create a new vault called `Kodex Wiki`
 2. Create the two top-level directories: `raw/` and `wiki/`
-3. Inside `raw/`, create a folder for your active memo book (e.g. `FN-vol-001/` or `R-vol-001`)
+3. Inside `raw/`, create a folder for your active memo book (e.g. `FL-vol-001/` or `FR-vol-001/`)
 4. Inside `wiki/`, create empty `index.md` and `log.md` files — the LLM will populate them
 5. Create a `SCHEMA.md` at the vault root that defines how the LLM should maintain the wiki *(see `/templates/schema.md`)*
 6. At the end of each day you've written something, scan the relevant page(s) of your active memo book and drop them into the appropriate `raw/` subfolder
 7. Pass the scans to an LLM (e.g. Claude) — it transcribes into `raw/`, then writes structured pages into `wiki/` and updates `index.md` and `log.md`
 8. Review the wiki entries; the LLM owns the wiki, you own the review
+
+**KOS setup (recommended):**
+
+1. Install [Node.js](https://nodejs.org) and an AI coding agent ([Claude Code](https://claude.ai/code), [Cursor](https://cursor.com), etc.)
+2. Run `npx skills add k0d3x8its/kos`
+3. Type `/kos` in your agent — the wizard handles the rest
+4. Drop sources into `raw/`, run `/kos-ingest`, browse results in Obsidian
 
 ### Adding Notion — Layer 2 (Optional)
 
@@ -213,6 +256,14 @@ Kodex OS is designed so any layer except Layer 0 can be removed without breaking
 
 ---
 
+## Related Repositories
+
+| Repo | Description |
+|---|---|
+| [k0d3x8its/kos](https://github.com/k0d3x8its/kos) | Layer 1 toolkit — Agent Skills for vault setup, ingest, querying, linting, and archiving |
+
+---
+
 ## Versioning & Changelog
 
 This system evolves. See `CHANGELOG.md` for a full history of updates to Kodex OS.
@@ -226,24 +277,16 @@ kodex-os/
 │
 ├── README.md                        ← You are here
 ├── CHANGELOG.md                     ← Version history
+├── LICENSE
+├── the-kodex-stack.md
+├── list-of-materials.md
 │
-├── stack/
-│   ├── layer-0-field-notes.md
-│   ├── layer-1-llm-wiki.md
-│   ├── layer-2-notion.md
-│   ├── layer-3-archive.md
-│   └── layer-4-trello.md
-│
-├── phases/
-│   ├── prep-phase-build.md
-│   ├── phase-1-observe-document.md
-│   ├── phase-2-data-extraction.md
-│   ├── phase-3-analysis-processing.md
-│   └── phase-4-archiving.md
-│
-└── templates/
-    ├── llm-wiki-note.md
-    └── schema.md
+└── phases/
+    ├── prep-phase-build.md
+    ├── phase-1-observe-document.md
+    ├── phase-2-data-extraction.md
+    ├── phase-3-analysis-processing.md
+    └── phase-4-archiving.md
 ```
 
 ---
