@@ -8,9 +8,9 @@ This phase starts after everything has been extracted for a particular subject o
 
 ## Epoch I — Analyze
 
-This Epoch is where you analyze what you have extracted to a notebook or kept in the memo book. Either way, this is where you absorb the information you have notated and analyze it. Analyzation is about determining what to keep and what to leave behind. What is relevant? What is not?
+This Epoch is where you analyze what you have extracted to a Field Study or kept in the Field Research. Either way, this is where you absorb the information you have notated and analyze it. Analyzation is about determining what to keep and what to leave behind. What is relevant? What is not?
 
-> 💡 **LLM Wiki (optional):** If you are using the LLM Wiki, this is where you analyze the Wiki entry for this subject — correcting, expanding, or trimming what the extraction produced. The physical analysis process is the same regardless.
+> 💡 **LLM Wiki (optional):** If you are using the LLM Wiki, this is where you analyze the Wiki entry for this subject — correcting, expanding, or trimming what the extraction produced. Run /kos-lint as well. The physical analysis process is the same regardless.
 
 ---
 
@@ -23,4 +23,4 @@ This is evaluated by the relevancy of the information:
 - Should I archive it?
 - Am I done with it?
 
-> 💡 **LLM Wiki (optional):** If you are using the LLM Wiki, processing also means marking the corresponding Wiki entry as complete and ready to be linked to the archive record. This closes the loop between the physical book and its digital counterpart.
+> 💡 **LLM Wiki (optional):** If you are using the LLM Wiki, this is more automated and complex. Essentially, processing means marking the corresponding Wiki entry as complete and ready to be linked to the archive record. This closes the loop between the physical book and its digital counterpart.
