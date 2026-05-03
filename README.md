@@ -161,11 +161,11 @@ Kodex OS moves through four phases. These are fluid — not every piece of captu
 
 | Phase | Name | Description |
 |---|---|---|
-| Prep | [Build](phases/prep-phase-build) | Gather materials, set up your memo books |
-| I | Observe & Document | Capture everything in Field Notes |
-| II | Data Extraction | Review and extract what's worth pursuing further |
-| III | Analysis & Processing | Analyze, filter, and route information |
-| IV | Archiving | File completed memo books; close digital records |
+| Prep | [Build](phases/prep-phase-build.md) | Gather materials, set up your memo books |
+| I | [Observe & Document](phases/phase-i-observe-and-document.md) | Capture everything in Field Notes |
+| II | [Data Extraction](phases/phase-ii-data-extraction.md) | Review and extract what's worth pursuing further |
+| III | [Analysis & Processing](phases/phase-iii-analysis-and-processing.md) | Analyze, filter, and route information |
+| IV | [Archiving](phases/phase-iv-archiving.md) | File completed memo books; close digital records |
 
 ### Prep Phase — Build
 
