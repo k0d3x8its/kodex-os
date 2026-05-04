@@ -6,7 +6,7 @@
 - **⬆️:** README.md — Phase I now includes LLM Wiki callout for end-of-day scan/ingest workflow
 - **⬆️:** README.md — Phase IV now includes LLM Wiki callout for `kos-archive` workflow
 - **♻️:** README.md — minimum memo book requirement updated to Field Log + Field Research
-- **♻️:** Repository structure — removed `stack/` directories 
+- **♻️:** Repository structure — removed `stack/` directories
 - **➕:** `LICENSE`, `the-kodex-stack.md`, `list-of-materials.md` at root
 
 ## v1.1.1b (2026-05-03)
