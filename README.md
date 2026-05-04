@@ -8,21 +8,22 @@
     <img alt="Field Notes" src="https://img.shields.io/badge/Field_Notes-Supported-FFD700?labelColor=555555">
 </a>
 </div></br>
+
 > A personal operating system for capturing, organizing, and preserving knowledge — bridging the physical and digital world.
 
 ---
 
 ## What is Kodex OS?
 
-Kodex OS is a modular personal knowledge system built around the belief that the best thinking happens on paper, but the best *organization* happens digitally. It bridges a physical capture practice with digital tools without requiring any single tool to make the whole system work.
+Kodex OS is a modular personal knowledge management system built around the belief that the best thinking happens on paper, but the best organization happens digitally. It bridges a physical capture practice with digital tools without requiring any single tool to make the whole system work.
 
-The system is designed to be **taken apart and reassembled**. If you don't use Obsidian, remove it. If you don't use Notion, remove it. The core of Kodex OS — Field Notes and a physical archive — stands on its own.
+The system is designed to be **modular**. If you don't use Obsidian, remove it. If you don't use Notion, remove it. The core of Kodex OS — Field Notes and a physical archive — stands on its own.
 
 ---
 
 ## The Kodex Stack
 
-The Stack is the architecture of Kodex OS. It defines five layers, numbered by dependency — each layer feeds the next. Layer 0 must exist before anything else can function.
+The Kodex Stack is the architecture of Kodex OS. It defines five layers, numbered by dependency — each layer feeds the next. Layer 0 must exist before anything else can function.
 
 ```
 Layer 0: Field Notes  →  Layer 1: LLM Wiki  →  Layer 2: Notion
