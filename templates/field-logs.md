@@ -1,6 +1,6 @@
-# 📑 Daily Logs
+# 📑 Field Logs
 
-My daily logs are anything I find I want to solidify as a memory or useful/meaningful experiences. Other reasons may be therapeutic. Studies show writing in a journal can be helpful for the mind to process.
+My field logs are anything I find I want to solidify as a memory or useful/meaningful experiences. Other reasons may be therapeutic. Studies show writing in a journal can be helpful for the mind to process.
 
 Any experience I have I will document if I feel it will:
 
@@ -13,4 +13,4 @@ The image below is a template for documenting, from left to right, the day, temp
 
 **Example:**
 
-![Field Log Template](assets/field-log-template.jpeg)
+![Field Log Template](../assets/field-log-template.jpeg)
