@@ -6,4 +6,4 @@ Each page is a work week. I use graph paper memo books for this because it makes
 
 Below is a template of the explanation above.
 
-![Time Log Template](./assets/time-log-template.jpeg)
+![Time Log Template](../assets/time-log-template.jpeg)
