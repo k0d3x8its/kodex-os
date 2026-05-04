@@ -1,4 +1,4 @@
-# 💼 Work Hours
+# 💼 Time Log
 
 This is an easy way for me to keep up with my work hours rather than depending on my job to do it for me. I write down when I clock in and out down to the minute. I then cross reference this with what my check stub states. My job has given me wrong hours twice in 4 years.
 
@@ -6,4 +6,4 @@ Each page is a work week. I use graph paper memo books for this because it makes
 
 Below is a template of the explanation above.
 
-![Time Log Template](assets/time-log-template.jpeg)
+![Time Log Template](./assets/time-log-template.jpeg)
