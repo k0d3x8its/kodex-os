@@ -291,10 +291,10 @@ kodex-os/
 │
 └── phases/
     ├── prep-phase-build.md
-    ├── phase-1-observe-document.md
-    ├── phase-2-data-extraction.md
-    ├── phase-3-analysis-processing.md
-    └── phase-4-archiving.md
+    ├── phase-i-observe-document.md
+    ├── phase-ii-data-extraction.md
+    ├── phase-iii-analysis-processing.md
+    └── phase-iv-archiving.md
 ```
 
 ---
