@@ -289,12 +289,23 @@ kodex-os/
 ├── the-kodex-stack.md
 ├── list-of-materials.md
 │
-└── phases/
-    ├── prep-phase-build.md
-    ├── phase-i-observe-document.md
-    ├── phase-ii-data-extraction.md
-    ├── phase-iii-analysis-processing.md
-    └── phase-iv-archiving.md
+├── phases/
+│   ├── prep-phase-build.md
+│   ├── phase-i-observe-document.md
+│   ├── phase-ii-data-extraction.md
+│   ├── phase-iii-analysis-processing.md
+│   └── phase-iv-archiving.md
+│
+├── templates/
+│   ├── field-logs.md
+│   ├── time-log.md
+│   └── references.md
+│
+└── assets/
+    ├── field-log-template.jpeg
+    ├── reference-covers.jpeg
+    └── time-log-template.jpeg
+
 ```
 
 ---
