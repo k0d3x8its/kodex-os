@@ -8,4 +8,4 @@ An example is Ubuntu command line. I know many commands but, I cannot remember t
 
 Below is a visual example for the covers of three of my reference guides for Ubuntu Commands, Git Commands, and Docker Commands.
 
-![Reference Guides](../assets/references-covers.jpeg)
+![Reference Guides](../assets/reference-covers.jpeg)
