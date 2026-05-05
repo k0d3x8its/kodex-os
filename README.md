@@ -219,7 +219,7 @@ The fastest path is [KOS](https://github.com/k0d3x8its/kos), the Layer 1 toolkit
 
 1. Install [Obsidian](https://obsidian.md) and create a new vault called `Kodex Wiki`
 2. Create the two top-level directories: `raw/` and `wiki/`
-3. Inside `raw/`, create a folder for your active memo book (e.g. `FL-vol-001/` or `FR-vol-001/`)
+3. Inside `raw/`, create a folder for your active memo book(s) (e.g. `Field-Logs/FL-vol-001/` and/or `Field-Research/FR-vol-001/`)
 4. Inside `wiki/`, create empty `index.md` and `log.md` files — the LLM will populate them
 5. Create a `SCHEMA.md` at the vault root that defines how the LLM should maintain the wiki *(see `/templates/schema.md`)*
 6. At the end of each day you've written something, scan the relevant page(s) of your active memo book and drop them into the appropriate `raw/` subfolder
@@ -324,7 +324,7 @@ Kodex OS does not prescribe what you write or think. It only asks that you write
 ---
 ## License
 
-Copyright 2026 K0d3x
+Copyright 2026 K0d3x 8its
 
 Licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full text.
 
