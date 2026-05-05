@@ -76,11 +76,15 @@ This gives you five skills:
 
 **Vault structure:**
 ```
-Kodex Wiki/
+Kodex Vault/
 ├── raw/                    ← Your inbox — drop sources here (immutable)
-│   ├── FL-vol-XXX/         ← Field Log: daily log memo books
-│   ├── FR-vol-XXX/         ← Field Research: catchall research memo books
-│   └── FS-vol-XXX/         ← Field Study: dedicated subject memo books
+│   ├── Field-Logs/         # Field Log memo books
+│   │   └── FL-vol-XXX/     
+│   ├── Field-Research/     # Field Research memo books
+│   │   └── FR-vol-XXX/     
+│   ├── Field-Studies/      # Field Study memo books
+│   │   └── FS-vol-XXX/
+│   └── assets/             # Images and attachments
 ├── wiki/                   ← LLM-maintained (do not edit by hand)
 │   ├── sources/            ← One summary per ingested source
 │   ├── books/              ← One page per Field Notes memo book
