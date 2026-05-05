@@ -8,7 +8,7 @@
     <img alt="Field Notes" src="https://img.shields.io/badge/Field_Notes-Supported-FFD700?labelColor=555555">
 </a>
 
-<img alt="LLM" src="https://img.shields.io/badge/LLM-Supported-000000?labelColor=555555">
+<img alt="LLM" src="https://img.shields.io/badge/LLM-Supported-FFFFFF?labelColor=555555">
 </div></br>
 
 > A personal operating system for capturing, organizing, and preserving knowledge — bridging the physical and digital world.
