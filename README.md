@@ -25,7 +25,7 @@ The system is designed to be **modular**. If you don't use Obsidian, remove it. 
 
 ## The Kodex Stack
 
-The Kodex Stack is the architecture of Kodex OS. It defines five layers, numbered by dependency — each layer feeds the next. Layer 0 must exist before anything else can function.
+The Kodex Stack is the architecture of Kodex OS. It defines five layers, each with a distinct role in the system. Layer numbers reflect their function, not a strict dependency chain — layers draw from whichever other layers they need, not necessarily the one before them.
 
 ```
 Layer 0: Field Notes  →  Layer 1: LLM Wiki  →  Layer 2: Notion
