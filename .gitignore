@@ -1,6 +1,2 @@
-session-log.md
-task_plan.md
-findings.md
-progress.md
-.claude/plugins/
-.claude/skills/
+# Release artifacts
+RELEASE-NOTES.md
