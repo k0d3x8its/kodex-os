@@ -176,7 +176,7 @@ Kodex OS moves through four phases. These are fluid — not every piece of captu
 
 ### Prep Phase — Build
 
-Gather your materials and set up your memo books. Assign each book a role (daily log, research, etc.) and configure your tools before you start capturing.
+Gather your materials and set up your memo books. Assign each book a role (Field Log, Field Research, etc.) and configure your tools before you start capturing.
 
 ### Phase I — Observe & Document
 
