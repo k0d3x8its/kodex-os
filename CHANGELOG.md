@@ -1,5 +1,7 @@
 # Changelog
 
+## [Unreleased]
+
 ## v1.1.2-rc.1 (2026-05-03)
 - **⬆️:** README.md — added `kos-archive` as 5th KOS skill
 - **⬆️:** README.md — added `books/_archived/` to vault structure
